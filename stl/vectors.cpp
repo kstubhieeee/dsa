@@ -68,7 +68,33 @@ void deleteElements()
     {
         cout << i << endl;
     }
+
+    v1.clear(); // clears everything in the vector v1
 }
+
+void swapVectors()
+{
+    vector<int> v1 = {1, 2};
+    vector<int> v2 = {3, 4};
+    swap(v1, v2);
+    for (auto i : v1)
+    {
+        cout << i << " ";
+    }
+}
+
+void insertElements()
+{
+    vector<int> v1 = {1, 2, 3, 4, 5};
+    // the insert function inserts an element before the specified index value
+    v1.insert(v1.begin(), 20);     // 20 is inserted before the 1st index
+    v1.insert(v1.begin() + 2, 30); // 30 is inserted before the 3rd index
+    for (auto i : v1)
+    {
+        cout << i << endl;
+    }
+}
+
 int main()
 {
     // basicVectors();
@@ -76,6 +102,8 @@ int main()
     // vectorWithElementsFilled();
     // copyVector();
     // operationsOnVector();
-    deleteElements();
+    // deleteElements();
+    // swapVectors();
+    insertElements();
     return 0;
 }
