@@ -40,11 +40,42 @@ void copyVector()
     }
 }
 
+void operationsOnVector()
+{
+    vector<int> v1 = {1, 2, 3, 4, 5};
+    cout << v1.front() << endl; // dispays the first element : 1
+    cout << v1.back() << endl;  // displayes the last element : 5
+    v1.pop_back();              // removes last element
+    for (auto i : v1)
+    {
+        cout << i << " "; // 1,2,3,4
+    }
+}
+
+void deleteElements()
+{
+    vector<int> v1 = {1, 2, 3, 4, 5};
+    v1.erase(v1.begin());     // deletes the first element
+    v1.erase(v1.begin() + 2); // deletes the third element from the new array
+    // for (auto i : v1)
+    // {
+    //     cout << i << endl;
+    // }
+
+    vector<int> v2 = {1, 2, 3, 4, 5};
+    v2.erase(v2.begin() + 1, v2.end() - 1); // deletes the elements from the position 1 to 3 i.e. 2,3,4 assuming the indexing starts from 0
+    for (auto i : v2)
+    {
+        cout << i << endl;
+    }
+}
 int main()
 {
     // basicVectors();
     // vectorsWithPair();
     // vectorWithElementsFilled();
-    copyVector();
+    // copyVector();
+    // operationsOnVector();
+    deleteElements();
     return 0;
 }
