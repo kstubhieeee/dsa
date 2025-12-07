@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main
+int main()
 {
     stack<int> st;
     st.push(1);    // {1}
